@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+Weather:
+  api:
+    key: 094430226f574529987b54ce92552c59
+
+
+key=your_actual_api_key:
