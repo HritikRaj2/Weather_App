@@ -23,11 +23,11 @@ public class UserController {
         WeatherResponse weatherResponse=weatherSevice.getWeather(city);
         String greeting="";
         if(weatherResponse!=null){
-            greeting=",Weather is"+ weatherResponse.getCurrent().getFeelslike()+"" + "and \nTemperature is "+weatherResponse.getCurrent().getTemperature();
+            greeting="The Weather FeelsLike="+ weatherResponse.getCurrent().getFeelslike()+"°C" + "\nTemperature is="+weatherResponse.getCurrent().getTemperature()+"°C";
         }
 
 
 
-        return new ResponseEntity<>("Hi Hritik "+greeting , HttpStatus.OK);
+        return new ResponseEntity<>("Hi User, In "+city+"\n"+greeting , HttpStatus.OK);
     }
 }
